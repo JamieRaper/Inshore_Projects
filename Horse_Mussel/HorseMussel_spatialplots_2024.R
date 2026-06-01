@@ -209,9 +209,9 @@ ends.date.logs <- "2023-10-01"  #YYYY-MM-DD use Oct 1
 
 #### Read files ####
 #Polygons for spatial plots
-poly.sf <- st_read("Y:/Inshore/BoFBoundaries/SPABoundaries_Redrawn2014/SPA New Polys/shp polygons", layer = "SPA3_polygon_NAD83")
-poly.VMS <- st_read("Y:/Inshore/Databases/Scallsur/SPA3", layer = "SPA3_VMS_StrataBrierLurcher")
-poly.SMB <- st_read("Y:/Inshore/Databases/Scallsur/SPA3", layer = "SMB")
+poly.sf <- st_read("Z:/GISdata/Private/BoFBoundaries/SPABoundaries_Redrawn2014/SPA New Polys/shp polygons", layer = "SPA3_polygon_NAD83")
+poly.VMS <- st_read("Z:/Inshore/Databases/Scallsur/SPA3", layer = "SPA3_VMS_StrataBrierLurcher")
+poly.SMB <- st_read("Z:/Inshore/Databases/Scallsur/SPA3", layer = "SMB")
 
 
 #### Select data ####

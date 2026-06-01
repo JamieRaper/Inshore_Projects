@@ -157,7 +157,7 @@ create_output_table(output, output_type = "xlsx",  file_name=paste0(dir,cruise,"
 
 # CHECKS ------------------------------------------------------------------
 
-hm.live <- read.csv("Y:/Inshore/Databases/Scallsur/ScallsurUpdates/2022/Db_Update_HorseMusselAddition/ptran_load/Feb2322_GM2021/comparisons/GM2021_horsemussellive.csv")
+hm.live <- read.csv("Z:/Inshore/Databases/Scallsur/ScallsurUpdates/2022/Db_Update_HorseMusselAddition/ptran_load/Feb2322_GM2021/comparisons/GM2021_horsemussellive.csv")
 
 #SPECIES.CODE can only be 4332
 table(hm.live$SPECIES.CODE)
