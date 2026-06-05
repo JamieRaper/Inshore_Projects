@@ -10,9 +10,9 @@ library(scales)
 library(patchwork)
 
 
-saveplot.dir <- "Z:/Projects/Holistic_sampling_Inshore/TechReport/Figures/"
+saveplot.dir <- "Y:/Projects/Holistic_sampling_Inshore/TechReport/Figures/"
 
-SPA3.dat <- read.csv("Z:/Projects/Holistic_sampling_Inshore/Holistic_sampling_with_HGS/TechReport_SPA3/Data/SPA3_scallop_data.csv") %>% 
+SPA3.dat <- read.csv("Y:/Projects/Holistic_sampling_Inshore/Holistic_sampling_with_HGS/TechReport_SPA3/Data/SPA3_scallop_data.csv") %>% 
   mutate(GSI.Dry = (Gonad.Dry.Corrected/Full.Dry.Corrected)*100) %>% 
   mutate(GSI.Wet = (Gonad.Wet.Corrected/Full.Wet.Corrected)*100) %>% 
   filter(Gonad.Dry.Corrected != 0) #a couple gonads were to small for scale, throws off analysis if kept in

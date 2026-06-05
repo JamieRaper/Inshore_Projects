@@ -37,7 +37,7 @@ quer2 <- paste(
 
 livefreq.hm <- dbGetQuery(chan, quer2)
 
-#livefreq.hm <- readRDS("Z:/Projects/Horse_Mussel/HM_InshoreSurvey/data/Prorated/horsemussellive_prorated.rds") %>% filter(SAMPLE.METHOD != 1)#remove tows where no SHF data was collected.
+#livefreq.hm <- readRDS("Y:/Projects/Horse_Mussel/HM_InshoreSurvey/data/Prorated/horsemussellive_prorated.rds") %>% filter(SAMPLE.METHOD != 1)#remove tows where no SHF data was collected.
 
 # add YEAR column to data
 livefreq.hm$YEAR <- ifelse(grepl("SFA29", livefreq.hm$CRUISE), as.numeric(substr(livefreq.hm$CRUISE,6,9)), as.numeric(substr(livefreq.hm$CRUISE,3,6)))
@@ -92,7 +92,7 @@ plot.SMB.SLF <- ggplot() + geom_col(data = SMB.SLFmeans.for.plot, aes(x = bin.mi
 plot.SMB.SLF
 
 # Save out plot
-png(paste0("Z:/Projects/Horse_Mussel/HM_InshoreSurvey/Figures/HM_SMB_strata22_SLF.png"), type="cairo", width=18, height=24, units = "cm", res=400)
+png(paste0("Y:/Projects/Horse_Mussel/HM_InshoreSurvey/Figures/HM_SMB_strata22_SLF.png"), type="cairo", width=18, height=24, units = "cm", res=400)
 print(plot.SMB.SLF)
 dev.off()
 
@@ -138,7 +138,7 @@ plot.BI.SLF <- ggplot() + geom_col(data = BI.SLFmeans.for.plot, aes(x = bin.mid.
 plot.BI.SLF
 
 # Save out plot
-png(paste0("Z:/Projects/Horse_Mussel/HM_InshoreSurvey/Figures/HM_BI_strata23_56_SLF.png"), type="cairo", width=18, height=24, units = "cm", res=400)
+png(paste0("Y:/Projects/Horse_Mussel/HM_InshoreSurvey/Figures/HM_BI_strata23_56_SLF.png"), type="cairo", width=18, height=24, units = "cm", res=400)
 print(plot.BI.SLF)
 dev.off()
 
@@ -184,7 +184,7 @@ plot.LURCH.SLF <- ggplot() + geom_col(data = LURCH.SLFmeans.for.plot, aes(x = bi
 plot.LURCH.SLF
 
 # Save out plot
-png(paste0("Z:/Projects/Horse_Mussel/HM_InshoreSurvey/Figures/HM_LURCH_strata24_SLF.png"), type="cairo", width=18, height=24, units = "cm", res=400)
+png(paste0("Y:/Projects/Horse_Mussel/HM_InshoreSurvey/Figures/HM_LURCH_strata24_SLF.png"), type="cairo", width=18, height=24, units = "cm", res=400)
 print(plot.LURCH.SLF)
 dev.off()
 
@@ -230,7 +230,7 @@ plot.SFA29.SLF <- ggplot() + geom_col(data = SFA29.SLFmeans.for.plot, aes(x = bi
 plot.SFA29.SLF
 
 # Save out plot
-png(paste0("Z:/Projects/Horse_Mussel/HM_InshoreSurvey/Figures/HM_SFA29_SLF.png"), type="cairo", width=18, height=24, units = "cm", res=400)
+png(paste0("Y:/Projects/Horse_Mussel/HM_InshoreSurvey/Figures/HM_SFA29_SLF.png"), type="cairo", width=18, height=24, units = "cm", res=400)
 print(plot.SFA29.SLF)
 dev.off()
 
@@ -275,7 +275,7 @@ plot.GM.SLF <- ggplot() + geom_col(data = GM.SLFmeans.for.plot, aes(x = bin.mid.
 plot.GM.SLF
 
 # Save out plot
-png(paste0("Z:/Projects/Horse_Mussel/HM_InshoreSurvey/Figures/HM_GM_strata_30-32_SLF.png"), type="cairo", width=18, height=24, units = "cm", res=400)
+png(paste0("Y:/Projects/Horse_Mussel/HM_InshoreSurvey/Figures/HM_GM_strata_30-32_SLF.png"), type="cairo", width=18, height=24, units = "cm", res=400)
 print(plot.GM.SLF)
 dev.off()
 
@@ -321,7 +321,7 @@ plot.SPA4.SLF <- ggplot() + geom_col(data = SPA4.SLFmeans.for.plot, aes(x = bin.
 plot.SPA4.SLF
 
 # Save out plot
-png(paste0("Z:/Projects/Horse_Mussel/HM_InshoreSurvey/Figures/HM_SPA4_strata_1-21_47-48_SLF.png"), type="cairo", width=18, height=24, units = "cm", res=400)
+png(paste0("Y:/Projects/Horse_Mussel/HM_InshoreSurvey/Figures/HM_SPA4_strata_1-21_47-48_SLF.png"), type="cairo", width=18, height=24, units = "cm", res=400)
 print(plot.SPA4.SLF)
 dev.off()
 
@@ -368,7 +368,7 @@ plot.Upper.Bay.SLF <- ggplot() + geom_col(data = Upper.Bay.SLFmeans.for.plot, ae
 plot.Upper.Bay.SLF
 
 # Save out plot
-png(paste0("Z:/Projects/Horse_Mussel/HM_InshoreSurvey/Figures/HM_UpperBay_strata_35_49Eof-64.92_50-52_SLF.png"), type="cairo", width=18, height=24, units = "cm", res=400)
+png(paste0("Y:/Projects/Horse_Mussel/HM_InshoreSurvey/Figures/HM_UpperBay_strata_35_49Eof-64.92_50-52_SLF.png"), type="cairo", width=18, height=24, units = "cm", res=400)
 print(plot.Upper.Bay.SLF)
 dev.off()
 
@@ -416,7 +416,7 @@ plot.Inner.Bay.SLF <- ggplot() + geom_col(data = Inner.Bay.SLFmeans.for.plot, ae
 plot.Inner.Bay.SLF
 
 # Save out plot
-png(paste0("Z:/Projects/Horse_Mussel/HM_InshoreSurvey/Figures/HM_InnerBay_strata_37-38_53-55_49Wof-64.92_SLF.png"), type="cairo", width=18, height=24, units = "cm", res=400)
+png(paste0("Y:/Projects/Horse_Mussel/HM_InshoreSurvey/Figures/HM_InnerBay_strata_37-38_53-55_49Wof-64.92_SLF.png"), type="cairo", width=18, height=24, units = "cm", res=400)
 print(plot.Inner.Bay.SLF)
 dev.off()
 
@@ -461,6 +461,6 @@ plot.MBS.SLF <- ggplot() + geom_col(data = MBS.SLFmeans.for.plot, aes(x = bin.mi
 plot.MBS.SLF
 
 # Save out plot
-png(paste0("Z:/Projects/Horse_Mussel/HM_InshoreSurvey/Figures/HM_MBS_strata_39_SLF.png"), type="cairo", width=18, height=24, units = "cm", res=400)
+png(paste0("Y:/Projects/Horse_Mussel/HM_InshoreSurvey/Figures/HM_MBS_strata_39_SLF.png"), type="cairo", width=18, height=24, units = "cm", res=400)
 print(plot.MBS.SLF)
 dev.off()
