@@ -15,7 +15,7 @@ library(mapview)
 uid <- keyring::key_list("Oracle")[1,2]
 pwd <- keyring::key_get("Oracle", uid)
 
-dir <- "Z:/Projects/Horse_Mussel/HM_InshoreSurvey/data/"
+dir <- "Y:/Projects/Horse_Mussel/HM_InshoreSurvey/data/"
 #dir <- "C:/Users/WILSONB/Documents/1_Projects/HM_project_temp/Prorated/"
 survey.year <- 2023
 Year <- c(2018:survey.year)
@@ -65,10 +65,10 @@ SFA29 <- st_read(paste0(temp2, "/SFA29_subareas_utm19N.shp")) %>% mutate(ID = se
 
 #Load VMS rasters:
 
-ss.scallop.vms <- raster("Z:/Projects/BoF_Mapping_Project/Data/GIS_Layers/Other/FishingEffort_Rastor/Fisheries_VMS_TIFF/SS_Scallop_VMS_Percentiles.tif")
+ss.scallop.vms <- raster("Y:/Projects/BoF_Mapping_Project/Data/GIS_Layers/Other/FishingEffort_Rastor/Fisheries_VMS_TIFF/SS_Scallop_VMS_Percentiles.tif")
 ss.scallop.vms <- projectRaster(ss.scallop.vms, crs = 4326)
 
-ss.gf.mobile.vms<- raster("Z:/Projects/BoF_Mapping_Project/Data/GIS_Layers/Other/FishingEffort_Rastor/Fisheries_VMS_TIFF/SS_Groundfish_Mobile_VMS_Percentiles.tif")
+ss.gf.mobile.vms<- raster("Y:/Projects/BoF_Mapping_Project/Data/GIS_Layers/Other/FishingEffort_Rastor/Fisheries_VMS_TIFF/SS_Groundfish_Mobile_VMS_Percentiles.tif")
 ss.gf.mobile.vms<-projectRaster(ss.gf.mobile.vms, crs = 4326)
 
 
@@ -84,21 +84,21 @@ HM.ebsa <- st_read(paste0(temp2, "/DFO_EBSA.shp")) %>% filter(Name == "Modiolus 
 
 #Read in Kostelev et al. horse mussel bioherms shapefile
 
-kostelev.poly <- st_read("Z:/Projects/BoF_Mapping_Project/Data/GIS_Layers/Shapefiles/HorseMussel_shapefiles/HM_polygons_Kostylev2009/HM_polygons.shp")
+kostelev.poly <- st_read("Y:/Projects/BoF_Mapping_Project/Data/GIS_Layers/Shapefiles/HorseMussel_shapefiles/HM_polygons_Kostylev2009/HM_polygons.shp")
 
-kos.mod.poly <- st_read("Z:/Projects/BoF_Mapping_Project/Data/GIS_Layers/Shapefiles/HorseMussel_shapefiles/HM_polygons_Modified_2019/final_mod_polygons.shp")
+kos.mod.poly <- st_read("Y:/Projects/BoF_Mapping_Project/Data/GIS_Layers/Shapefiles/HorseMussel_shapefiles/HM_polygons_Modified_2019/final_mod_polygons.shp")
 
 # Load Camera survey data (camera)  ------------------------------------------
 
 #camera Survey stations - all stations (i.e. presence and absence)
-cam.surv <- st_read("Z:/Projects/BoF_Mapping_Project/Data/GIS_Layers/Shapefiles/AORG_NSCC_Survey_Lines_and_Points/CombinedCameraStation_CtrPts/2017-19_AORG_CameraStns_MERGE_and_CLEANED.shp")
+cam.surv <- st_read("Y:/Projects/BoF_Mapping_Project/Data/GIS_Layers/Shapefiles/AORG_NSCC_Survey_Lines_and_Points/CombinedCameraStation_CtrPts/2017-19_AORG_CameraStns_MERGE_and_CLEANED.shp")
 
 cam.surv <- cam.surv |> 
   mutate(Survey.type = "Cam") |> 
   dplyr::select(Survey.type)
 
 #camera survey horse mussel presence only
-hm.pres.cam <- read.csv("Z:/Projects/Horse_Mussel/HM_InshoreSurvey/data/HMPresence_CameraSurvey.csv") |> 
+hm.pres.cam <- read.csv("Y:/Projects/Horse_Mussel/HM_InshoreSurvey/data/HMPresence_CameraSurvey.csv") |> 
   mutate(Gear = "Drop Camera")
 hm.pres.cam$Station  <- as.factor(hm.pres.cam$Station)
 
@@ -133,7 +133,7 @@ hm.pres.tow$Station  <- as.factor(hm.pres.tow$Station)
 
 hm.presence.2023 <- rbind(hm.pres.cam, hm.pres.tow)
 
-write.csv(hm.presence.2023, "Z:/Projects/Horse_Mussel/HM_InshoreSurvey/data/HMpresence_drag_and_cam_updated2023.csv")
+write.csv(hm.presence.2023, "Y:/Projects/Horse_Mussel/HM_InshoreSurvey/data/HMpresence_drag_and_cam_updated2023.csv")
 
 #  Set up data for spatial plot ------------------------------------------
 
@@ -172,7 +172,7 @@ p+
         legend.key.size = unit(15,"mm"), plot.margin = margin(1,0,1,0, "cm"),panel.border = element_rect(colour = "black", fill=NA, size=1),
         legend.key=element_rect(colour="black"))
 
-ggsave(filename = "Z:/Projects/Horse_Mussel/HM_InshoreSurvey/Figures/MCT_availabledata_spatialPlot.png", plot = last_plot(), scale = 2.5, width = 8, height = 8, dpi = 300, units = "cm", limitsize = TRUE)
+ggsave(filename = "Y:/Projects/Horse_Mussel/HM_InshoreSurvey/Figures/MCT_availabledata_spatialPlot.png", plot = last_plot(), scale = 2.5, width = 8, height = 8, dpi = 300, units = "cm", limitsize = TRUE)
 
 #Testing Colour palettes
 

@@ -18,7 +18,7 @@ uid <- un.sameotoj
 pwd <- pw.sameotoj
 
 
-dir <- "Z:/Projects/Horse_Mussel/HM_InshoreSurvey/data/"
+dir <- "Y:/Projects/Horse_Mussel/HM_InshoreSurvey/data/"
 #dir <- "C:/Users/WILSONB/Documents/1_Projects/HM_project_temp/Prorated/"
 survey.year <- 2023
 Year <- c(2018:survey.year)
@@ -67,10 +67,10 @@ SFA29 <- st_read(paste0(temp2, "/SFA29_subareas_utm19N.shp")) %>% mutate(ID = se
 
 
 #Load VMS rasters:
-#ss.scallop.vms <- raster("Z:/Projects/BoF_Mapping_Project/Data/GIS_Layers/Other/FishingEffort_Rastor/Fisheries_VMS_TIFF/SS_Scallop_VMS_Percentiles.tif")
+#ss.scallop.vms <- raster("Y:/Projects/BoF_Mapping_Project/Data/GIS_Layers/Other/FishingEffort_Rastor/Fisheries_VMS_TIFF/SS_Scallop_VMS_Percentiles.tif")
 #ss.scallop.vms <- projectRaster(ss.scallop.vms, crs = 4326)
 
-#ss.gf.mobile.vms<- raster("Z:/Projects/BoF_Mapping_Project/Data/GIS_Layers/Other/FishingEffort_Rastor/Fisheries_VMS_TIFF/SS_Groundfish_Mobile_VMS_Percentiles.tif")
+#ss.gf.mobile.vms<- raster("Y:/Projects/BoF_Mapping_Project/Data/GIS_Layers/Other/FishingEffort_Rastor/Fisheries_VMS_TIFF/SS_Groundfish_Mobile_VMS_Percentiles.tif")
 #ss.gf.mobile.vms<-projectRaster(ss.gf.mobile.vms, crs = 4326)
 
 
@@ -98,8 +98,8 @@ st_write(BI.Closure, "C:/GISdata/Basemaps/ProtectedAreas/networksites_proposed_O
 
 
 #Read in Kostelev et al. horse mussel bioherms shapefile
-#kostelev.poly <- st_read("Z:/Projects/BoF_Mapping_Project/Data/GIS_Layers/Shapefiles/HorseMussel_shapefiles/HM_polygons_Kostylev2009/HM_polygons.shp")
-#kos.mod.poly <- st_read("Z:/Projects/BoF_Mapping_Project/Data/GIS_Layers/Shapefiles/HorseMussel_shapefiles/HM_polygons_Modified_2019/final_mod_polygons.shp")
+#kostelev.poly <- st_read("Y:/Projects/BoF_Mapping_Project/Data/GIS_Layers/Shapefiles/HorseMussel_shapefiles/HM_polygons_Kostylev2009/HM_polygons.shp")
+#kos.mod.poly <- st_read("Y:/Projects/BoF_Mapping_Project/Data/GIS_Layers/Shapefiles/HorseMussel_shapefiles/HM_polygons_Modified_2019/final_mod_polygons.shp")
 
 # Load live horse mussel data (survey) for all years and areas (2018-present) ------------------------------------------
 
@@ -209,7 +209,7 @@ ends.date.logs <- "2023-10-01"  #YYYY-MM-DD use Oct 1
 
 #### Read files ####
 #Polygons for spatial plots
-poly.sf <- st_read("Y:/Inshore/BoFBoundaries/SPABoundaries_Redrawn2014/SPA New Polys/shp polygons", layer = "SPA3_polygon_NAD83")
+poly.sf <- st_read("Y:/GISdata/Private/BoFBoundaries/SPABoundaries_Redrawn2014/SPA New Polys/shp polygons", layer = "SPA3_polygon_NAD83")
 poly.VMS <- st_read("Y:/Inshore/Databases/Scallsur/SPA3", layer = "SPA3_VMS_StrataBrierLurcher")
 poly.SMB <- st_read("Y:/Inshore/Databases/Scallsur/SPA3", layer = "SMB")
 

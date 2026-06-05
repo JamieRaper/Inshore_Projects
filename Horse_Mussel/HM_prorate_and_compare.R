@@ -22,7 +22,7 @@ survey.year <- 2021
 Year <- c(2018:survey.year)
 Year <- Year[! Year %in% 2020]
 
-dir <- paste0("Z:/Projects/Horse_Mussel/HM_InshoreSurvey/data/",survey.year,"/")
+dir <- paste0("Y:/Projects/Horse_Mussel/HM_InshoreSurvey/data/",survey.year,"/")
 
 #### Import Source functions####
 funcs <- c("https://raw.githubusercontent.com/Mar-scal/Assessment_fns/master/Survey_and_OSAC/convert.dd.dddd.r") 
@@ -89,7 +89,7 @@ for(i in 1:nrow(hm.live)) {
 hm.live <- hm.live %>% dplyr::select(CRUISE, TOW_NO, TOW_TYPE_ID, MGT_AREA_ID, START_LAT, START_LONG, STRATA_ID, DEPTH, BIN_ID_0:BIN_ID_195)%>%
   mutate(dplyr::select(., BIN_ID_0:BIN_ID_195) %>% round(1)) 
 
-write.csv(hm.live, paste0("Z:/Projects/Horse_Mussel/HM_InshoreSurvey/data/Prorated/",cruise,"_live_standardize_R_version.csv"), row.names = FALSE)
+write.csv(hm.live, paste0("Y:/Projects/Horse_Mussel/HM_InshoreSurvey/data/Prorated/",cruise,"_live_standardize_R_version.csv"), row.names = FALSE)
 
 
 # COMPARISONS -------------------------------------------------------------

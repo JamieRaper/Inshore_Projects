@@ -37,11 +37,11 @@ library(mapview)
 #predictors <- lapply(pred_list, raster) 
 #predictors <- stack(predictors) #MUST BE SAME EXTENT/RESOLUTION
 
-#benthoscape <- st_read("Z:/Projects/BoF_Mapping_Project/Analysis/Benthoscape_mapping/Unsupervised_Classification/UnsupervisedClassification_shapefiles/BoF_Benthoscape_Unsupervised_objDissolve/BoF_Benthoscape_objDissolve.shp")
+#benthoscape <- st_read("Y:/Projects/BoF_Mapping_Project/Analysis/Benthoscape_mapping/Unsupervised_Classification/UnsupervisedClassification_shapefiles/BoF_Benthoscape_Unsupervised_objDissolve/BoF_Benthoscape_objDissolve.shp")
 #benthoscape <- st_transform(benthoscape, crs = st_crs(4326)) %>%
 #  st_transform(st_crs(32620))
 
-#hm.dat <- readRDS("Z:/Projects/Horse_Mussel/HM_InshoreSurvey/data/Prorated/horsemussellive_prorated.rds") %>%
+#hm.dat <- readRDS("Y:/Projects/Horse_Mussel/HM_InshoreSurvey/data/Prorated/horsemussellive_prorated.rds") %>%
 #  mutate(mid_lon = MID_LONG) %>% #duplicate lat, longs to use after converting to sf
 #  mutate(mid_lat = MID_LAT) %>% 
 #  st_as_sf(coords = c("MID_LONG", "MID_LAT"), crs = 4326) %>% 
@@ -108,7 +108,7 @@ library(mapview)
 
 #hm.enviro.dat <- hm.enviro.sf %>% st_set_geometry(NULL)
 
-#write.csv(hm.enviro.dat, "Z:/Projects/Horse_Mussel/HM_InshoreSurvey/data/HorseM_EnviroData.csv", row.names = F)
+#write.csv(hm.enviro.dat, "Y:/Projects/Horse_Mussel/HM_InshoreSurvey/data/HorseM_EnviroData.csv", row.names = F)
 
 # ENVIRONMENTAL DATA ---------------------------------------------------------------
 
@@ -129,13 +129,13 @@ library(flextable)
 library(GGally)
 
 #ZUUR functions
-source("Z:/Projects/GB_time_area_closure_SPERA/scripts/HighstatLibV11.R")
+source("Y:/Projects/GB_time_area_closure_SPERA/scripts/HighstatLibV11.R")
 
 #Load the environmental data
-enviro.dat <- read.csv("Z:/Projects/Horse_Mussel/HM_InshoreSurvey/data/HorseM_EnviroData.csv")
+enviro.dat <- read.csv("Y:/Projects/Horse_Mussel/HM_InshoreSurvey/data/HorseM_EnviroData.csv")
 
 #Table with predictor variable metadata
-pred.tab <- read.csv("Z:/Projects/Horse_Mussel/HM_InshoreSurvey/data/PredictorVariableTable.csv")
+pred.tab <- read.csv("Y:/Projects/Horse_Mussel/HM_InshoreSurvey/data/PredictorVariableTable.csv")
 
 enviro.dat.long <- pivot_longer(enviro.dat, cols = Bathy:Wave_Shear_Vel,  names_to = "Pred_Variable", values_to = "Value")
 

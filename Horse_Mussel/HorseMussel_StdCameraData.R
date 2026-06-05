@@ -22,7 +22,7 @@ for(fun in funcs)
 
 # LIVE- CAMERA DATA  -------------------------------------------------
 
-hm.dat <- read.csv("Z:/Projects/Horse_Mussel/HM_CameraSurvey/data/HM_camerasurvey.csv")
+hm.dat <- read.csv("Y:/Projects/Horse_Mussel/HM_CameraSurvey/data/HM_camerasurvey.csv")
 
 #Standardize images to #/m^2
 hm.dat <- hm.dat %>% 
@@ -48,7 +48,7 @@ BoF_predictors <- raster::stack(BoF_pred_list)
 mapview::mapview(BoF_predictors[[20]])
 
 #Read in Benthoscape shapefile
-benthoscape <- st_read("Z:/Projects/BoF_Mapping_Project/Analysis/Benthoscape_mapping/Unsupervised_Classification/UnsupervisedClassification_shapefiles/BoF_Benthoscape_Unsupervised_objDissolve/BoF_Benthoscape_objDissolve.shp")
+benthoscape <- st_read("Y:/Projects/BoF_Mapping_Project/Analysis/Benthoscape_mapping/Unsupervised_Classification/UnsupervisedClassification_shapefiles/BoF_Benthoscape_Unsupervised_objDissolve/BoF_Benthoscape_objDissolve.shp")
 
 #STRATA FILE FROM GITHUB
 # Find where tempfiles are stored
@@ -126,7 +126,7 @@ hm.enviro.sf <- hm.enviro.dat %>%
 
 hm.enviro.dat <- hm.enviro.sf %>% st_set_geometry(NULL)
 
-#write.csv(hm.enviro.dat, "Z:/Projects/Horse_Mussel/HM_InshoreSurvey/Documents/DataExploration_report/HM_camdata_andEnviro.csv", row.names = F)
+#write.csv(hm.enviro.dat, "Y:/Projects/Horse_Mussel/HM_InshoreSurvey/Documents/DataExploration_report/HM_camdata_andEnviro.csv", row.names = F)
 
 
 vars.perstation <- hm.enviro.dat %>%
@@ -146,7 +146,7 @@ per.station <- per.station %>%
   rename(Benthoscape = Benthoscape.x) %>% 
   rename(PRESENT.ABSENT = PRESENT.ABSENT.x)
 
-write.csv(per.station, "Z:/Projects/Horse_Mussel/HM_InshoreSurvey/data/HorseM_Cam_EnviroData.csv", row.names = F)
+write.csv(per.station, "Y:/Projects/Horse_Mussel/HM_InshoreSurvey/data/HorseM_Cam_EnviroData.csv", row.names = F)
 
 # Contour plots -----------------------------------------------------------
 
@@ -210,14 +210,14 @@ p + #Plot survey data and format figure.
         legend.box.margin = margin(6, 8, 6, 8)) + #Legend bkg margin (top, right, bottom, left)
   guides(shape = guide_legend(override.aes = list(size = 3)))
 
-ggsave(filename = paste0('Z:/Projects/Horse_Mussel/HM_InshoreSurvey/Documents/DataExploration_report/Figures/PresenceAbsence_CameraHM.png'), plot = last_plot(), scale = 2.5, width = 8, height = 8, dpi = 300, units = "cm", limitsize = TRUE)
+ggsave(filename = paste0('Y:/Projects/Horse_Mussel/HM_InshoreSurvey/Documents/DataExploration_report/Figures/PresenceAbsence_CameraHM.png'), plot = last_plot(), scale = 2.5, width = 8, height = 8, dpi = 300, units = "cm", limitsize = TRUE)
 
 
 
 # Data Exploration --------------------------------------------------------
 
 
-source("Z:/Projects/Horse_Mussel/HM_InshoreSurvey/HighstatLibV7.R")
+source("Y:/Projects/Horse_Mussel/HM_InshoreSurvey/HighstatLibV7.R")
 
 #Inspect the file
 #What do we have?
